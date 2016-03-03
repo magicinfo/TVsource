@@ -15,12 +15,14 @@ https://desktop.github.com/
 
 on server run command line 
 
-for first time 
-git clone https://github.com/magicinfo/TVsource.git
+for first time run
+
+
+$ git clone https://github.com/magicinfo/TVsource.git
 
 to download updates 
 
-git pull
+$ git pull
 
 command line can be processed over SSH connection with Putty or from PHP page 
 shell_exec('git pull');
