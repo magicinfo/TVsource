@@ -19,6 +19,15 @@ for first time run
 
 
  git clone https://github.com/magicinfo/TVsource.git
+ 
+if you want change name of directory 
+
+git clone https://github.com/magicinfo/TVsource.git dirname
+
+if you want in current directory add dot on the end
+
+ git clone https://github.com/magicinfo/TVsource.git .
+
 
 to download updates 
 
