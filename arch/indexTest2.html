@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+		<title>Source Switch</title>
+
+		<!-- Common API -->
+		<script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/API/Widget.js'></script>
+		<script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/API/TVKeyValue.js'></script>
+		<script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/API/Plugin.js'></script>
+       <!-- <script type='text/javascript' language='javascript' src='$MANAGER_WIDGET/Common/jquery.js'></scri-->pt>
+		<script language='javascript' type='text/javascript' src='v1/jquery-2.1.4.min.js'></script>
+
+        <!-- Plugins -->
+        <object id='sefPlugin' class='plugin' classid='clsid:SAMSUNG-INFOLINK-SEF'></object>
+        <object id='sefPluginForLFD' class='plugin' classid='clsid:SAMSUNG-INFOLINK-SEF'></object>
+        <object id='sefPluginPIP' class='plugin' classid='clsid:SAMSUNG-INFOLINK-SEF'></object>
+        <object id='pluginObjTVMW' border=0 classid='clsid:SAMSUNG-INFOLINK-TVMW'></object>
+
+
+
+		<!-- Javascript code -->
+		 <!-- <script src="http://105.102.48.40:8080/target/target-script-min.js#anonymous"></script>
+       <script language='javascript' type='text/javascript' src='http://105.64.202.208/ssspApps/SharedLibs/jquery-2.0.0.js'></script>-->
+        <script language='javascript' type='text/javascript' src='app/javascript/main2.js'></script>
+		
+		
+
+		<!-- Style sheets -->
+		
+		<link rel='stylesheet' href='app/stylesheets/main.css' type='text/css' />
+	</head>
+
+	<body onload='Main.onLoad();' onunload='Main.onUnload();' style="background-color:#000;">
+	<div id="MainMenu">
+		<div id="SourceList" style="">
+			<h1>Source Switch </h1></h1>
+			<ul id="SourceListList">
+				<li data-id="PC" data-cmd="20" >PC</li>
+				<li data-id="DVI" data-cmd="24" >DVI</li>
+				<li data-id="DVIV" data-cmd="31" >DVI Video</li>
+				<li data-id="DTV" data-cmd="64" >DTV</li>
+				<li data-id="HDMI1" data-cmd="33" >HGMI 1</li>
+				<li data-id="HDMI2" data-cmd="35" >HDMI 2</li>
+			</ul>
+		</div>
+        <div id='DebugBox' class="hidden">
+			<a id="DebugClear" href="#clear">Clear</a>
+			<div id='DebugText'>
+
+			</div>
+		</div>
+		<div>
+
+		</div>
+        <div id="SmallMenu">
+			<style>
+				#SmallMenu{
+					width: 100%;
+					background: rgba(0,0,0,0.5);
+					position: absolute;
+					bottom: 0;
+					transition: transform 0.5s ease-out;
+				}
+				#SmallMenu.closed{
+					transform: translateY(30px);
+				}
+				#SouceControl{
+					display: inline-block;
+					margin-left: 45%;
+				}
+				#SouceControl a:active{
+					/*background-color: white;*/
+					text-shadow: 2px 2px white;
+				}
+				#SouceControl a.selected{
+					color: red;
+				}
+				@keyframes blink {
+					25% { color: white; }
+					50% { color:red; }
+					75% { color: white; }
+				}
+				.blink {
+					animation: blink 3s linear;
+				}
+			</style>
+			<div id="SouceControl">
+				<a data-id="HDMI1" data-cmd="33" class="selected blink" >HGMI 1</a>
+				<a data-id="HDMI2" data-cmd="35" >HDMI 2</a>
+
+			</div>
+			<div class="pull-right">
+				You are watching <span id="watching">SAT TV</span>
+				<a  id="btnDebug" href="#Debug">Debug</a>
+			</div>
+
+		</div>
+	</div>
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+	<title>Bell Canada Source Switch</title>
+	<script language='javascript' type='text/javascript' src='v1/jquery-2.1.4.min.js'></script>
+
+	<object id='sefPlugin' class='plugin' classid='clsid:SAMSUNG-INFOLINK-SEF'></object>
+	<script language='javascript' type='text/javascript' src='v1/switch1.js'></script>
+	<link rel='stylesheet' href='v1/main.css' type='text/css' />
+</head>
+<script>
+	var appsettings={
+		hide_menu_delay:30,
+		watching:'You are watching',
+		loading:'Loading...'
+	}
+</script>
+
+<body style="background-color:#ffffff;">
+	<div id="SmallMenu">
+		<div id="SouceControl">
+			<a href="#39" data-id="DVI" data-cmd="39" >SAT TV</a>
+			<a herf="#31"  data-id="HDMI" data-cmd="31" >FIBE TV</a>
+		</div>
+		<div id="CurrentTV">
+			<span id="currentState">Select TV source</span> <span id="watching"></span>
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
