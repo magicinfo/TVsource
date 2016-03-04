@@ -15,6 +15,7 @@ body{
     color: white;
 	background:none !important;
 }
+
 #CurrentTV{
     width: 250px;
     position: absolute;
@@ -35,8 +36,15 @@ body{
     bottom: 0;
     transition: transform 1s ease-out;
     -webkit-transition:  -webkit-transform 1s ease-out;
-    padding: 10px;
+   /* padding: 10px;*/
     font-weight: bold;
+
+}
+#SmallMenu{
+    background-image:url('assets/BellLogoSmall.png');
+    background-size:contain;
+
+    background-repeat: no-repeat;
 }
 #SmallMenu.closed{
     transform: translateY(40px);
@@ -46,18 +54,16 @@ body{
     display: inline-block;
     margin-left: 45%;
 }
-#SouceControl a{
-    margin-right: 20px;
-    text-decoration: none;
-    color: inherit;
-}
+
 /*#SouceControl a:active{
     !*background-color: white;*!
     text-shadow: 2px 2px white;
 }*/
+/*
 #SouceControl a.selected{
     color: red;
 }
+*/
 
 @keyframes blink {
      25% { color: white; }
@@ -66,11 +72,11 @@ body{
  }
 
 @-webkit-keyframes blink {
-    25% { color: white; }
-    38% { color:red; }
-    55% { color: white; }
-    70% { color:red; }
-    90% { color: white; }
+    25% { color: #d11eff; }
+    38% { color: #bbdeff; }
+    55% { color: #25ffca; }
+    70% { color:#bbdeff; }
+    90% { color: #bbdeff; }
 
 }
 .blink {
