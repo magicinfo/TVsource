@@ -74,9 +74,9 @@ body{
 @-webkit-keyframes blink {
     25% { color: #d11eff; }
     38% { color: #bbdeff; }
-    55% { color: #25ffca; }
+    55% { color: #d23bff; }
     70% { color:#bbdeff; }
-    90% { color: #bbdeff; }
+    90% { color: #a124ff; }
 
 }
 .blink {
