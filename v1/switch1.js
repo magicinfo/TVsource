@@ -41,8 +41,14 @@ Main.onLoad = function (opts) {
 
 
 	var selected;
-
+var bgImage = true
 	var setSelected = function(num){
+		if(bgImage) {
+			$('#BgImage').fadeOut(function(){
+				$('#BgImage').remove();
+			});
+			bgimage =false;
+		}
 		$('#SouceControl').children().removeClass('selected');
 		 var el = $('#SouceControl').find('[data-cmd='+num+']');
 		el.addClass('selected');
