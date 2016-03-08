@@ -39,7 +39,17 @@ Main.onLoad = function (opts) {
 	var current=1;
 	initAPI();
 
+	var scanTimer
 
+var scanForSorce = function(){
+	scanTimer =setInterval(function(){
+		current++;
+		if(current>60)clearInterval(scanTimer);
+		Main.sefPlugin.Execute('SetSource',current);
+		$('#CurrntChannel').text(current);
+	},10000);
+}
+	//scanForSorce();
 	var selected;
 var bgImage = true
 	var setSelected = function(num){
